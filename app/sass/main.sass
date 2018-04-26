@@ -17,6 +17,7 @@ body
 	overflow-x: hidden
 	color: $black
 	background: $main-color
+	margin-bottom: 40px
 	input, textarea
 		border: #666 1px solid
 		outline: none
@@ -94,6 +95,7 @@ img + span
 	padding: 0 20px
 	align-items: center
 	box-shadow: 0 7px 0 -5px rgba(0,0,0,0.2)
+	margin-bottom: 5px
 	&:hover
 		color: #fff
 		text-decoration: none
@@ -117,7 +119,7 @@ img + span
 	width: 50px
 	border-radius: 10em
 	background: $add
-	left: 5%
+	left: 2.5%
 	top: 5%
 	box-shadow: 0 5px 10px rgba(0,0,0,0.2)
 	cursor: pointer
@@ -129,8 +131,84 @@ img + span
 	align-items: center
 	color: $light
 	font-size: 22px
+	transition: left .2s ease-in-out
+	@extend .fa
+	&::after
+		font-size: 20px
+		content: fa-content($fa-var-bars)
+
+.hamburger-open
+	left: 280px
+	&::after
+		content: fa-content($fa-var-arrow-left)
 
 .side-menu
-	display: none
+	z-index: 10
+	position: fixed
+	background: $light
+	height: 100vh
+	display: flex
+	justify-content: center
+	width: 250px
+	left: -300px
+	box-shadow: 3px 0 10px rgba(0,0,0,0.2)
+	transition: left .25s ease-in-out
+	overflow: auto
+	&::-webkit-scrollbar
+		width: 5px
+		background-color: #F5F5F5
+	&::-webkit-scrollbar-thumb
+		border-radius: 10px
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3)
+		background-color: #555
+	&::-webkit-scrollbar-track
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+		background-color: #F5F5F5
+
+.side-open
+	left: 0
+
+.side-nav
+	margin-top: 10px
+	width: 100%
+	h3
+		text-transform: uppercase
+		height: 30px
+		margin: 10px 0
+		display: flex
+		align-items: center
+		&::before
+			content: ''
+			display: flex
+			height: 13px
+			width: 30px
+			margin-right: 10px
+			background: $add
+
+.side-nav ul, .side-nav ul li
+	list-style: none
+	margin: 0
+	padding: 0
+
+.side-nav a
+	padding: 10px
+	display: flex
+	width: 100%
+	color: $black
+	&:hover
+		background: $main-color
+		text-decoration: none
+		color: $black
+
+.nav > li > a
+	font-weight: bold
+	border-left: 2px $red solid
+	background: #eee
+
+.nav-sub li
+	padding-left: 10px !important
+
+.anchor-hover
+	background: $main-color !important
 
 @import "media" // Always at the end
