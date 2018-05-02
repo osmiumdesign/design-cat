@@ -9,7 +9,9 @@ $('.menu-hamburger').on('click', function() {
               $("a[rel='anchor']").mPageScroll2id({
                 scrollSpeed: 800,
                 highlightClass:"anchor-hover",
-                keepHighlightUntilNext: true,
+                
               });
           });
+
 });
+
