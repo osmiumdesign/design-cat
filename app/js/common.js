@@ -13,5 +13,8 @@ $('.menu-hamburger').on('click', function() {
               });
           });
 
+  $(document).pjax('.nav a', '#pjax-container', {fragment: '#pjax-container'});
+
 });
+
 

@@ -1,6 +1,7 @@
 @import "vars"
 @import "fonts"
 @import "libs"
+@import url('https://fonts.googleapis.com/css?family=Merriweather:700')
 
 ::placeholder
 	color: #666
@@ -17,7 +18,7 @@ body
 	overflow-x: hidden
 	color: $black
 	background: $main-color
-	margin-bottom: 40px
+	padding-bottom: 70px
 	input, textarea
 		border: #666 1px solid
 		outline: none
@@ -40,6 +41,12 @@ b, strong
 	font-weight: bold
 strong
 	font-size: 1.2em
+
+h1
+	font-size: 1.88em
+
+h1, h2, h3
+	font-family: 'Merriweather', $default-font
 
 
 //Content
@@ -111,6 +118,66 @@ img + span
 	&:hover
 		color: inherit
 		text-decoration: none
+
+.p-right
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: flex-end
+	span
+		padding-right: 5px
+	a
+		&:hover
+			~ span
+				border-bottom: 1px solid transpared
+
+.list, .list li
+	margin: 0
+	padding: 0
+
+.list
+	list-style: decimal
+	li
+		margin-left: 45px
+
+.u-wrap
+	margin: 25px
+	position: relative
+	padding-bottom: 56.25%
+	padding-top: 30px
+	height: 0
+	overflow: hidden
+
+.u-wrap iframe
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+
+footer
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	font-weight: bold
+	color: $black
+	position: absolute
+	height: 50px
+	width: 100%
+	left: 0
+	bottom: 0
+	a
+		color: #000
+		&:hover
+			color: #000
+			text-decoration: none
+			border-bottom: 1px solid $black
+
 
 //Side-menu
 .menu-hamburger
