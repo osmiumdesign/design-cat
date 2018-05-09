@@ -9,6 +9,7 @@
 ::selection
 
 
+
 body
 	font-size: 16px
 	min-width: 320px
@@ -18,7 +19,7 @@ body
 	overflow-x: hidden
 	color: $black
 	background: $main-color
-	padding-bottom: 70px
+	padding-bottom: 120px
 	input, textarea
 		border: #666 1px solid
 		outline: none
@@ -157,6 +158,26 @@ img + span
 	width: 100%
 	height: 100%
 
+.prev-next
+	display: inline-block
+	padding: 10px 30px
+	background: $add
+	color: $light
+	margin-bottom: 20px
+	border-radius: 10em
+	top: 0px
+	transition: box-shadow .2s ease-in-out, top .1s ease-out
+	&:hover
+		color: $light
+		text-decoration: none
+		box-shadow: 0 3px 10px rgba(0,0,0,0.2)
+		transition: box-shadow .2s ease-in-out, top .1s ease-out
+	&:active
+		box-shadow: none
+		position: relative
+		top: 2px
+		transition: box-shadow .2s ease-in-out, top .1s ease-out
+
 footer
 	display: -webkit-flex
 	display: -moz-flex
@@ -167,11 +188,11 @@ footer
 	font-weight: bold
 	color: $black
 	position: absolute
-	height: 50px
+	height: 100px
 	width: 100%
 	left: 0
 	bottom: 0
-	a
+	.copy-href
 		color: #000
 		&:hover
 			color: #000

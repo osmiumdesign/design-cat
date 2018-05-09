@@ -9,12 +9,13 @@ $('.menu-hamburger').on('click', function() {
               $("a[rel='anchor']").mPageScroll2id({
                 scrollSpeed: 800,
                 highlightClass:"anchor-hover",
-                
               });
           });
 
-  $(document).pjax('.nav a', '#pjax-container', {fragment: '#pjax-container'});
-
 });
-
-
+if ($(window).width() > 720) {
+$(document).ready(function() {
+  $('.menu-hamburger').addClass('hamburger-open');
+  $('.side-menu').addClass('side-open');
+});
+};
